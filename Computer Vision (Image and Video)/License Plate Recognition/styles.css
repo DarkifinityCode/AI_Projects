@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#image-container {
+    margin-top: 20px;
+}
+
+canvas {
+    border: 2px solid #333;
+    max-width: 100%;
+}
+
+#output {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #007BFF;
+}
