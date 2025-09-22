@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Energy Consumption Prediction</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Energy Consumption Prediction</h1>
+    <p class="muted">Upload a CSV or use demo data, train an LSTM, and forecast future usage.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <div class="card">
+        <h2>Data</h2>
+        <label class="file">
+          <input type="file" id="fileInput" accept=".csv" />
+          <span>Upload CSV (timestamp,value)</span>
+        </label>
+        <button id="useDemoBtn" type="button">Use Demo Data</button>
+        <p class="hint">CSV format example:<br>2024-01-01 00:00, 120.5</p>
+      </div>
+
+      <div class="card grid">
+        <div>
+          <label>Window Size
+            <input id="windowSize" type="number" min="4" max="256" value="48" />
+          </label>
+        </div>
+        <div>
+          <label>Epochs
+            <input id="epochs" type="number" min="1" max="200" value="20" />
+          </label>
+        </div>
+        <div>
+          <label>Forecast Horizon
+            <input id="horizon" type="number" min="1" max="500" value="24" />
+          </label>
+        </div>
+        <div>
+          <label>Train/Test Split (% train)
+            <input id="trainSplit" type="number" min="50" max="95" value="80" />
+          </label>
+        </div>
+      </div>
+
+      <div class="card actions">
+        <button id="trainBtn" type="button">Train Model</button>
+        <button id="forecastBtn" type="button" disabled>Forecast</button>
+      </div>
+
+      <div class="card status">
+        <p id="status">Status: Waiting for data…</p>
+        <progress id="progress" value="0" max="1" style="display:none;"></progress>
+      </div>
+    </section>
+
+    <section class="chart-wrap">
+      <canvas id="chart"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 — Energy Consumption Prediction (TensorFlow.js)</small>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- App -->
+  <script src="script.js"></script>
+</body>
+</html>
