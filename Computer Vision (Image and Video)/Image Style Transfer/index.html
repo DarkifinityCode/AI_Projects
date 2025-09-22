@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Style Transfer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/style-transfer"></script>
+</head>
+<body>
+    <h1>AI Image Style Transfer 🎨</h1>
+    <p>Transform your photo into a painting by applying artistic styles in real-time!</p>
+
+    <div class="upload-section">
+        <label>Upload Content Image:</label>
+        <input type="file" id="contentImageUpload" accept="image/*">
+
+        <label>Upload Style Image:</label>
+        <input type="file" id="styleImageUpload" accept="image/*">
+    </div>
+
+    <div class="image-container">
+        <div>
+            <h3>Content Image</h3>
+            <img id="contentImage" src="" alt="Content" />
+        </div>
+        <div>
+            <h3>Style Image</h3>
+            <img id="styleImage" src="" alt="Style" />
+        </div>
+    </div>
+
+    <button id="transferBtn">Apply Style</button>
+
+    <h3>Result</h3>
+    <canvas id="resultCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
