@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Language Recognition</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection/dist/hand-pose-detection.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Sign Language Recognition</h1>
+    <p class="muted">Detect hand gestures and translate them into letters using TensorFlow.js</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="startBtn">🔴 Start Camera</button>
+      <button id="stopBtn" disabled>⏹ Stop Camera</button>
+    </section>
+
+    <section class="viewer">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="overlay"></canvas>
+      <div id="prediction">Gesture: <span id="gesture">None</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Sign Language Recognition (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
