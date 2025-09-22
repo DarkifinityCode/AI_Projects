@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Forecasting</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📈 Sales Forecasting</h1>
+    <p>Enter last 6 months’ sales to predict next month</p>
+
+    <form id="forecastForm">
+      <label>Month 1 Sales:</label>
+      <input type="number" id="m1" required>
+      <label>Month 2 Sales:</label>
+      <input type="number" id="m2" required>
+      <label>Month 3 Sales:</label>
+      <input type="number" id="m3" required>
+      <label>Month 4 Sales:</label>
+      <input type="number" id="m4" required>
+      <label>Month 5 Sales:</label>
+      <input type="number" id="m5" required>
+      <label>Month 6 Sales:</label>
+      <input type="number" id="m6" required>
+
+      <button type="submit">Forecast</button>
+    </form>
+
+    <h2 id="output">Predicted Sales: --</h2>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
