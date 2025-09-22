@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Churn Prediction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Customer Churn Prediction</h1>
+
+  <form id="churnForm">
+    <label>Monthly Charges: <input type="number" id="monthlyCharges" required></label>
+    <label>Tenure (months): <input type="number" id="tenure" required></label>
+    <label>Contract Type:
+      <select id="contract">
+        <option value="0">Month-to-Month</option>
+        <option value="1">One Year</option>
+        <option value="2">Two Year</option>
+      </select>
+    </label>
+    <label>Support Calls Made: <input type="number" id="supportCalls" required></label>
+
+    <button type="submit">Predict Churn</button>
+  </form>
+
+  <h2 id="result">Prediction will appear here...</h2>
+
+  <!-- TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
