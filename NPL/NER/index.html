@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NER Tool</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Named Entity Recognition (NER)</h1>
+    <p class="muted">Detect names, places, dates, and organizations in your text</p>
+  </header>
+
+  <main>
+    <textarea id="textInput" placeholder="Enter text here..." rows="6"></textarea>
+    <button id="analyzeBtn">Analyze</button>
+    <div id="output" class="output"></div>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — NER Tool (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
