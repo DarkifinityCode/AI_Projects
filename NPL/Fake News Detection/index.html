@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fake News Detector</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Fake News Detector</h1>
+    <p class="muted">Paste news text and check if it’s real or fake</p>
+  </header>
+
+  <main>
+    <textarea id="newsInput" placeholder="Paste news text here..." rows="8"></textarea>
+    <button id="predictBtn">Predict</button>
+    <div id="result">Prediction: <span id="prediction">None</span></div>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Fake News Detector (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
