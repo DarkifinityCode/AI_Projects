@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+canvas {
+  max-width: 800px;
+  margin: auto;
+  display: block;
+}
