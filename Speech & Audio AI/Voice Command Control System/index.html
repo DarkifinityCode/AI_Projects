@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Voice Command Control</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands"></script>
+</head>
+<body>
+  <header>
+    <h1>Voice Command Control System</h1>
+    <p class="muted">Control UI elements using your voice commands</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="startBtn">🎤 Start Listening</button>
+      <button id="stopBtn" disabled>⏹ Stop Listening</button>
+      <div id="status">Status: Idle</div>
+    </section>
+
+    <section class="actions">
+      <div id="light" class="action-box">💡 Light: OFF</div>
+      <div id="menu" class="action-box">📂 Menu: Closed</div>
+      <div id="music" class="action-box">🎵 Music: Paused</div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Voice Command Control (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
