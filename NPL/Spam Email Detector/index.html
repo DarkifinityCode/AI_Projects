@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Spam Email Detector</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Spam Email Detector</h1>
+    <p class="muted">Paste email content and check if it's spam or not</p>
+  </header>
+
+  <main>
+    <textarea id="emailInput" placeholder="Paste email content here..." rows="6"></textarea>
+    <button id="analyzeBtn">Analyze</button>
+    <div id="result">Classification: <span id="classification">None</span></div>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Spam Email Detector (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
