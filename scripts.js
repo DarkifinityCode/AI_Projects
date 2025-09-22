@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const categoryCards = document.querySelectorAll(".category-card");
+  const cards = document.querySelectorAll(".project-card");
 
-  categoryCards.forEach(card => {
+  cards.forEach(card => {
     card.addEventListener("click", () => {
-      const targetLink = card.getAttribute("data-link");
-      if (targetLink) {
-        window.location.href = targetLink;
+      const link = card.getAttribute("data-link");
+      if (link) {
+        window.location.href = link;
       }
     });
   });
