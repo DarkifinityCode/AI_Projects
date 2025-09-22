@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Image Colorization</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1>AI Image Colorization</h1>
+    <p>Upload a black-and-white image and let AI colorize it using Pix2Pix and TensorFlow.js.</p>
+
+    <input type="file" id="upload" accept="image/*" />
+    <div id="preview-container">
+        <div>
+            <h3>Original (B/W)</h3>
+            <img id="bwImage" src="" alt="Black and White Preview" />
+        </div>
+        <div>
+            <h3>Colorized</h3>
+            <canvas id="colorizedCanvas"></canvas>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="tfjs_1_1_2.js"></script>
+    <script src="utils.js"></script>
+    <script src="pix2pix.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

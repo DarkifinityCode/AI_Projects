@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 1rem;
+}
+
+main {
+    padding: 20px;
+}
+
+input, button, a {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+
+img, canvas {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    margin-top: 10px;
+}
+
+/* Mobile friendly */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
