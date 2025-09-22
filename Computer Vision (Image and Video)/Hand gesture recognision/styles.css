@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 1.8rem;
+}
+
+video, canvas {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+#gesture {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #00ffcc;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    #gesture {
+        font-size: 1.2rem;
+    }
+}
