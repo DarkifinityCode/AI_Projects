@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sentiment Analysis Tool</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Sentiment Analysis</h1>
+    <p class="muted">Analyze text and detect if it’s positive, negative, or neutral</p>
+  </header>
+
+  <main>
+    <textarea id="textInput" placeholder="Enter text here..." rows="6"></textarea>
+    <button id="analyzeBtn">Analyze</button>
+    <div id="result">Sentiment: <span id="sentiment">None</span></div>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Sentiment Analysis (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
