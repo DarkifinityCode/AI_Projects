@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Speech to Text</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>AI Real-Time Speech to Text</h1>
+        <p>Powered by Web Speech API</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <button id="startBtn">🎙️ Start Listening</button>
+            <button id="stopBtn" disabled>🛑 Stop Listening</button>
+        </div>
+
+        <div class="output">
+            <h2>Transcription:</h2>
+            <div id="transcript" class="transcript-box"></div>
+        </div>
+
+        <div id="status">Click "Start Listening" to begin.</div>
+    </main>
+
+    <footer>
+        <p>© 2025 Aseem Shukla | AI Demo Project</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
