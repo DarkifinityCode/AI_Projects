@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Emotion Detection from Voice</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Voice Emotion Detection</h1>
+    <p class="muted">Upload a voice clip to detect the speaker's emotion</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input type="file" id="audioFile" accept="audio/*">
+      <button id="predictBtn" disabled>🎤 Predict Emotion</button>
+    </section>
+
+    <section class="results">
+      <audio id="audioPlayer" controls></audio>
+      <div id="prediction">Emotion: <span id="emotion">None</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Voice Emotion Detection (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
