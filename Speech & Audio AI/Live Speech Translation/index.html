@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Real-Time Speech Translation</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands"></script>
+</head>
+<body>
+  <header>
+    <h1>Real-Time Speech Translation</h1>
+    <p class="muted">Speak and get your voice translated to another language in real-time</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label for="targetLang">Target Language:</label>
+      <select id="targetLang">
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="hi">Hindi</option>
+      </select>
+      <button id="startBtn">🎤 Start Listening</button>
+      <button id="stopBtn" disabled>⏹ Stop Listening</button>
+      <div id="status">Status: Idle</div>
+    </section>
+
+    <section class="results">
+      <div id="originalText">Original: <span id="original">None</span></div>
+      <div id="translatedText">Translated: <span id="translated">None</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Real-Time Speech Translation (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
