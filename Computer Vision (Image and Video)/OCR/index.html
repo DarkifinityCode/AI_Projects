@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR - Text Reader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>OCR - Optical Character Recognition</h1>
+
+    <input type="file" id="fileInput" accept="image/*">
+    <img id="preview" alt="Image Preview" style="max-width: 300px; display: none;">
+
+    <button id="extractBtn">Extract Text</button>
+
+    <div id="loading" style="display: none;">Processing... Please wait.</div>
+    <pre id="result"></pre>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
