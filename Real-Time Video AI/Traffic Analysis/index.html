@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vehicle Counting & Classification</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- TensorFlow.js + Coco-SSD -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+  <header>
+    <h1>Vehicle Counting & Classification</h1>
+    <p class="muted">Detect and count vehicles in real-time traffic video</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="startBtn">🔴 Start Camera</button>
+      <button id="stopBtn" disabled>⏹ Stop Camera</button>
+    </section>
+
+    <section class="viewer">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="overlay"></canvas>
+      <div id="counts">
+        Cars: <span id="carCount">0</span> |
+        Trucks: <span id="truckCount">0</span> |
+        Buses: <span id="busCount">0</span> |
+        Motorcycles: <span id="motorCount">0</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Vehicle Counting & Classification (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
