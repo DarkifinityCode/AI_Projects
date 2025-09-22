@@ -1,0 +1,30 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  text-align: center;
+  padding: 20px;
+}
+.container { max-width: 600px; margin: 0 auto; }
+h1 { margin-bottom: 20px; }
+#upload, #enhance {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+}
+.image-container {
+  position: relative;
+  margin-top: 20px;
+}
+.image-container img, .image-container canvas {
+  max-width: 100%;
+  border-radius: 8px;
+}
+#status {
+  margin-top: 15px;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  h1 { font-size: 1.5rem; }
+  #enhance { width: 100%; }
+}
