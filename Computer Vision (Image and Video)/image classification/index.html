@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.12.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
+</head>
+<body>
+    <header>
+        <h1>AI Image Classification</h1>
+        <p>Upload a photo, and the AI will classify it.</p>
+    </header>
+
+    <main>
+        <input type="file" id="imageUpload" accept="image/*">
+        <div id="preview-container">
+            <img id="preview" src="" alt="Preview">
+        </div>
+        <button id="classifyBtn">Classify Image</button>
+
+        <div id="results">
+            <h2>Predictions:</h2>
+            <ul id="predictionsList"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>Powered by TensorFlow.js & MobileNet</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
