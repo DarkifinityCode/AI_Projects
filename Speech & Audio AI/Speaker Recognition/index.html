@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Speaker Recognition AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Speaker Recognition</h1>
+    <p class="muted">Record your voice and identify the speaker</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="recordBtn">🎤 Record Voice</button>
+      <button id="predictBtn" disabled>🔍 Identify Speaker</button>
+      <button id="resetBtn">♻️ Reset</button>
+      <div id="status">Status: Idle</div>
+    </section>
+
+    <section class="results">
+      <audio id="audioPlayer" controls></audio>
+      <div id="prediction">Speaker: <span id="speaker">None</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Speaker Recognition (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
