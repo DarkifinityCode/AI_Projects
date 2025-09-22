@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fall Detection — Real Time</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- TFJS + Pose Detection (MoveNet) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection/dist/movenet"></script>
+</head>
+<body>
+  <header>
+    <h1>Fall Detection System</h1>
+    <p class="muted">Real-time pose-based fall detection using TensorFlow.js</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="startBtn">🔴 Start Monitoring</button>
+      <button id="stopBtn" disabled>⏹ Stop</button>
+
+      <label>
+        Sensitivity:
+        <input id="sensitivity" type="range" min="1" max="10" value="6" />
+      </label>
+
+      <label>
+        Alert Duration (s):
+        <input id="alertHold" type="number" min="3" max="20" value="6" />
+      </label>
+    </section>
+
+    <section class="viewer">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="overlay"></canvas>
+      <div id="alertBanner" class="hidden">⚠️ FALL DETECTED! ⚠️</div>
+    </section>
+
+    <section class="stats">
+      <div>State: <span id="state">idle</span></div>
+      <div>Last movement velocity: <span id="vel">0.00</span></div>
+      <div>Torso angle: <span id="angle">0°</span></div>
+    </section>
+
+    <audio id="alarmSound" src="alert.mp3" preload="auto"></audio>
+    <div id="notes">
+      <p><strong>Notes:</strong> Position camera so subject is fully visible. Tune sensitivity slider if false alarms occur.</p>
+    </div>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Fall Detection (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
