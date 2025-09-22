@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sports Analytics AI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- TensorFlow.js + Coco-SSD -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+  <header>
+    <h1>Sports Analytics AI</h1>
+    <p class="muted">Track ball, players, and movement patterns in real-time</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="startBtn">🔴 Start Camera</button>
+      <button id="stopBtn" disabled>⏹ Stop Camera</button>
+    </section>
+
+    <section class="viewer">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="overlay"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Sports Analytics AI (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
