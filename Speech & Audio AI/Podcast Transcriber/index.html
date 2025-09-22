@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Podcast Transcriber</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands"></script>
+</head>
+<body>
+  <header>
+    <h1>AI Podcast Transcriber</h1>
+    <p class="muted">Upload your audio podcast and get an AI-generated transcription</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input type="file" id="audioFile" accept="audio/*">
+      <button id="transcribeBtn" disabled>🎙 Transcribe</button>
+    </section>
+
+    <section class="results">
+      <audio id="audioPlayer" controls></audio>
+      <div id="transcript">Transcription: <span id="text">None</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — AI Podcast Transcriber (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
