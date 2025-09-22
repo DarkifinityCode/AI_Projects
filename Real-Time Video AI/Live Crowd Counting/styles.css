@@ -1,0 +1,37 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:#0f1724; color:#e6eef8;
+  display:flex; flex-direction:column; min-height:100vh;
+}
+header { text-align:center; padding:1rem; background:linear-gradient(90deg,#081028,#0b2540); }
+header h1 { font-size:1.4rem; margin-bottom:6px; }
+main { padding: 1rem; flex:1; max-width:1100px; margin:0 auto; width:100%; }
+
+.controls {
+  display:flex; justify-content:space-between; gap:0.5rem; align-items:center;
+  flex-wrap:wrap; margin-bottom:0.8rem;
+}
+.controls .left, .controls .right { display:flex; gap:0.5rem; align-items:center; }
+
+.controls input[type=file] { color: #222; padding:6px; }
+.controls button { background:#06b6d4; color:#012; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+.controls button:disabled { opacity:0.5; cursor:default; }
+
+.viewer { position:relative; display:flex; justify-content:center; align-items:center; }
+video, canvas { max-width:100%; border-radius:10px; background:#000; display:block; }
+video { width: 100%; height:auto; max-height:60vh; }
+#overlay, .heatmap { position:absolute; left:0; top:0; pointer-events:none; }
+
+.stats { display:flex; gap:1.2rem; justify-content:center; margin-top:0.8rem; color:#bfe9ff; }
+.stats div { background:rgba(255,255,255,0.03); padding:8px 12px; border-radius:8px; font-weight:600; }
+
+#status { text-align:center; margin-top:0.8rem; color:#9fb7c9; font-style:italic; }
+
+footer { text-align:center; padding:0.8rem; font-size:0.8rem; color:#94a3b8; margin-top:auto; }
+
+@media (max-width:700px) {
+  .controls { flex-direction:column; align-items:stretch; }
+  .right { justify-content:space-between; width:100%; }
+  stats { flex-direction:column; }
+}

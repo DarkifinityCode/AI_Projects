@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crowd Counting — Live</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- TensorFlow.js + Coco-SSD -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.2/dist/coco-ssd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Crowd Counting • Real-time</h1>
+    <p>Counts people from webcam or uploaded video using TensorFlow.js (Coco-SSD).</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <div class="left">
+        <input type="file" id="videoUpload" accept="video/*,image/*" />
+        <button id="startWebcam">Start Webcam</button>
+        <button id="stopWebcam" disabled>Stop Webcam</button>
+      </div>
+
+      <div class="right">
+        <label>Detection interval (ms)
+          <input id="interval" type="range" min="100" max="1000" step="50" value="300"/>
+        </label>
+        <label>Heatmap
+          <input id="heatmapToggle" type="checkbox" />
+        </label>
+        <button id="snapshot">Snapshot</button>
+      </div>
+    </section>
+
+    <section class="viewer">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="overlay"></canvas>
+      <canvas id="heatmapCanvas" class="heatmap"></canvas>
+    </section>
+
+    <section class="stats">
+      <div>Current Count: <span id="currentCount">0</span></div>
+      <div>Rolling Avg (10 frames): <span id="rollingAvg">0</span></div>
+      <div>Total Detections (session): <span id="totalDetections">0</span></div>
+    </section>
+
+    <div id="status">Loading model...</div>
+  </main>
+
+  <footer>
+    <small>© 2025 Aseem Shukla — Crowd Counting (TensorFlow.js)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
