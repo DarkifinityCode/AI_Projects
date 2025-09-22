@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Object Detection</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <header>
+        <h1>AI Object Detection</h1>
+        <p>Powered by TensorFlow.js and Coco-SSD</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="startWebcam">Start Webcam</button>
+            <button id="stopWebcam" disabled>Stop Webcam</button>
+        </div>
+
+        <div class="viewer">
+            <video id="webcam" autoplay muted playsinline style="display:none;"></video>
+            <img id="uploadedImage" style="display:none;">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div id="status">Loading model...</div>
+    </main>
+
+    <footer>
+        <p>© 2025 Aseem Shukla | AI Demo Project</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
