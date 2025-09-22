@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Defect Detection</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Defect Detection</h1>
+    <input type="file" id="upload" accept="image/*">
+    <button id="checkBtn" disabled>Check for Defects</button>
+    <div class="image-wrapper">
+      <img id="inputImg" alt="Upload image">
+      <canvas id="reconCanvas"></canvas>
+    </div>
+    <div id="status">Upload a "good" product image first to load model.</div>
+  </div>
+</body>
+</html>
