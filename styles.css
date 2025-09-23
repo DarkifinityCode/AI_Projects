@@ -30,7 +30,7 @@ body {
 }
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
   justify-content: center;
 }
@@ -131,7 +131,7 @@ body {
 .accent-dl { border-top: 4px solid #e83e8c; }
 .accent-rl { border-top: 4px solid #2bdc85; }
 .accent-gm { border-top: 4px solid #0984e3; }
-.accent-gm { border-top: 4px solid #2ecc71; }
+.accent-ms { border-top: 4px solid #2ecc71; }
 
 /* ---------- KEYFRAMES ---------- */
 @keyframes fadeUp {
@@ -140,5 +140,6 @@ body {
     transform: translateY(0);
   }
 }
+
 
 
