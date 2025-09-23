@@ -59,12 +59,18 @@ body {
 .project-card:nth-child(7) { animation-delay: 1.0s; }
 
 .project-card:hover {
-  transform: translateY(-15px) scale(1.50); 
-  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.35), 
-              0 0 25px var(--accent, #ff6f61); 
+  transform: translateY(-12px) scale(1.05); /* float + gentle enlarge */
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); /* base shadow */
 }
 
-}
+/* Neon glow matches category accent */
+.project-card.accent-ml:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #7b5cff; }
+.project-card.accent-cv:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #00c2ff; }
+.project-card.accent-nlp:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #ff8a00; }
+.project-card.accent-dl:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #e83e8c; }
+.project-card.accent-rl:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #2bdc85; }
+.project-card.accent-gm:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #0984e3; }
+.project-card.accent-ms:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #2ecc71; }
 
 /* ---------- CARD IMAGES ---------- */
 .project-card img {
@@ -143,6 +149,7 @@ body {
     transform: translateY(0);
   }
 }
+
 
 
 
