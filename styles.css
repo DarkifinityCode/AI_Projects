@@ -28,11 +28,13 @@ body {
 .projects-section {
   padding: 2rem;
 }
+.projects-container {
+  text-align: center;
+}
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
-  justify-content: center;
 }
 
 /* ---------- PROJECT CARD ---------- */
@@ -140,6 +142,7 @@ body {
     transform: translateY(0);
   }
 }
+
 
 
 
