@@ -59,8 +59,8 @@ body {
 .project-card:nth-child(7) { animation-delay: 1.0s; }
 
 .project-card:hover {
-  transform: translateY(-12px) scale(1.05); 
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), 
+  transform: translateY(-15px) scale(1.50); 
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.35), 
               0 0 25px var(--accent, #ff6f61); 
 }
 
@@ -143,6 +143,7 @@ body {
     transform: translateY(0);
   }
 }
+
 
 
 
