@@ -82,7 +82,7 @@ body {
 .project-card.accent-ist:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #ffd700; }
 .project-card.accent-lpr:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #ff6f61; }
 .project-card.accent-mia:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #6a5acd; }
-.project-card.accent-ocr:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #ffd700; }
+.project-card.accent-ocr:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #ff00ff; }
 .project-card.accent-od:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #ff8c00; }
 .project-card.accent-pe:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #ff1493; }
 .project-card.accent-pff:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 25px #8a2be2; }
@@ -160,7 +160,7 @@ body {
 .accent-ist { border-top: 4px solid #ffd700; }
 .accent-lpr { border-top: 4px solid #ff6f61; }
 .accent-mia { border-top: 4px solid #6a5acd; }
-.accent-ocr { border-top: 4px solid #ffd700; }
+.accent-ocr { border-top: 4px solid #ff00ff; }
 .accent-od { border-top: 4px solid #ff8c00; }
 .accent-pe { border-top: 4px solid #ff1493; }
 .accent-pff { border-top: 4px solid #8a2be2; }
