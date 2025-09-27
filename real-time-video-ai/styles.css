@@ -17,10 +17,10 @@ body {
 .page-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: #00ffe5;
+  color: var(--accent, #ff6f61);
 }
 .page-hero p {
-  color: #aaa;
+  color: var(--muted, #aaa);
   font-size: 1.1rem;
 }
 
@@ -86,7 +86,7 @@ body {
 
 /* ---------- LINKS ---------- */
 .project-links a {
-  color: var(--accent, #00ffe5);
+  color: var(--accent, #ff6f61);
   text-decoration: none;
   font-weight: 700;
   margin-right: 8px;
@@ -94,14 +94,14 @@ body {
   transition: color 0.25s ease;
 }
 .project-links a:hover {
-  color: #7afcff;
+  color: var(--accent-glow, #ff9671);
 }
 .project-links a::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: -4px;
   height: 2px;
-  background: #7afcff;
+  background: var(--accent-glow, #ff9671);
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: right;
